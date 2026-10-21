@@ -1,0 +1,10 @@
+[package]
+name = "quassar-event-engine-core"
+version = "0.1.0"
+edition = "2021"
+license = "Proprietary"
+description = "Deterministic temporal event processing research kernels"
+
+[lib]
+name = "quassar_event_engine_core"
+path = "src/lib.rs"

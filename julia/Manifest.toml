@@ -1,0 +1,10 @@
+# This file is machine-generated - editing it directly is not advised
+
+julia_version = "1.13.2"
+manifest_format = "2.1"
+project_hash = "1841d09941a6b892f8d3d54885d029de94f25e25"
+
+[[deps.QuassarEventEngine]]
+path = "."
+uuid = "bc3b38ae-6c34-4e91-98c2-18b51434e64b"
+version = "0.1.0"
