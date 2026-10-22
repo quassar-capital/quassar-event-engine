@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "repository": "quassar-event-engine",
+  "research": [
+    {
+      "id": "01",
+      "title": "Bayesian Online Change-Point Detection",
+      "description": "Sequential Bayesian change-point modeling and evaluation.",
+      "implementation": [
+        "src/quassar_event_engine/bocpd.py",
+        "rust/src/lib.rs",
+        "julia/src/QuassarEventEngine.jl"
+      ],
+      "tests": [
+        "tests/test_bocpd.py",
+        "tests/test_evaluation.py",
+        "julia/test/runtests.jl"
+      ],
+      "experiments": [
+        "research/evaluation.py",
+        "research/monte_carlo.py"
+      ]
+    }
+  ]
+}

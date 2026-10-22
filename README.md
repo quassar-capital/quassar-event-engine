@@ -10,6 +10,33 @@ Its research scope encompasses economic announcements, monetary policy decisions
 
 The methodological framework emphasizes temporal accuracy, statistical identification, economic interpretation, numerical reliability, reproducibility, and disciplined assessment of uncertainty and model limitations.
 
+<!-- RESEARCH_INDEX_START -->
+## Research Programs & Scientific Implementations
+
+The following research programs have corresponding scientific implementations in this repository.
+
+### Research 01 — Bayesian Online Change-Point Detection
+
+Sequential Bayesian change-point modeling and evaluation.
+
+**Scientific implementation**
+
+- [`bocpd.py`](src/quassar_event_engine/bocpd.py)
+- [`lib.rs`](rust/src/lib.rs)
+- [`QuassarEventEngine.jl`](julia/src/QuassarEventEngine.jl)
+
+**Automated validation**
+
+- [`test_bocpd.py`](tests/test_bocpd.py)
+- [`test_evaluation.py`](tests/test_evaluation.py)
+- [`runtests.jl`](julia/test/runtests.jl)
+
+**Research experiments**
+
+- [`evaluation.py`](research/evaluation.py)
+- [`monte_carlo.py`](research/monte_carlo.py)
+<!-- RESEARCH_INDEX_END -->
+
 ## Research Domains
 
 ### Financial Event Identification & Classification
