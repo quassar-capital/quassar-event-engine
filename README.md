@@ -1,3 +1,4 @@
+
 # Quassar Event Engine
 
 **Event-Driven Quantitative Research | Financial Event Analysis | Market Reactions | Temporal Data Modeling**
@@ -35,6 +36,26 @@ Sequential Bayesian change-point modeling and evaluation.
 
 - [`evaluation.py`](research/evaluation.py)
 - [`monte_carlo.py`](research/monte_carlo.py)
+
+### Research 02 — High-Dimensional Event Study Inference
+
+Statistical inference for event-associated financial responses under cross-sectional dependence.
+
+**Scientific implementation**
+
+- [`event_inference.rs`](research_02/rust/event_inference.rs)
+- [`event_inference.cpp`](research_02/cpp/event_inference.cpp)
+- [`event_inference.jl`](research_02/julia/event_inference.jl)
+
+**Automated validation**
+
+- [`event_inference.rs`](research_02/rust/event_inference.rs)
+- [`event_inference.cpp`](research_02/cpp/event_inference.cpp)
+- [`event_inference.jl`](research_02/julia/event_inference.jl)
+
+**Research experiments**
+
+- [`RESEARCH.md`](research_02/RESEARCH.md)
 <!-- RESEARCH_INDEX_END -->
 
 ## Research Domains
