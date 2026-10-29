@@ -8,6 +8,8 @@
 # No causal interpretation or finite-sample inferential
 # guarantee is implied by these numerical operations.
 
+using Test
+
 module QuassarResearch02
 
 export abnormal_returns, cumulative_abnormal_return, holm_adjustment
