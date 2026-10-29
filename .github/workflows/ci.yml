@@ -5,6 +5,7 @@ on:
     branches:
       - main
       - feature/event-engine-advanced-research-v1
+      - research-02-high-dimensional-event-inference
   pull_request:
     branches:
       - main
