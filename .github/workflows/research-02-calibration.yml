@@ -3,7 +3,13 @@ name: Research 02 Scientific Calibration
 
 on:
   workflow_dispatch:
-
+  push:
+    branches:
+      - research-02-high-dimensional-event-inference
+    paths:
+      - research_02/calibration.py
+      - research_02/python/**
+      - .github/workflows/research-02-calibration.yml
 permissions:
   contents: read
 
