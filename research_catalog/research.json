@@ -1,3 +1,4 @@
+
 {
   "schema_version": 1,
   "repository": "quassar-event-engine",
@@ -19,6 +20,24 @@
       "experiments": [
         "research/evaluation.py",
         "research/monte_carlo.py"
+      ]
+    },
+    {
+      "id": "02",
+      "title": "High-Dimensional Event Study Inference",
+      "description": "Statistical inference for event-associated financial responses under cross-sectional dependence.",
+      "implementation": [
+        "research_02/rust/event_inference.rs",
+        "research_02/cpp/event_inference.cpp",
+        "research_02/julia/event_inference.jl"
+      ],
+      "tests": [
+        "research_02/rust/event_inference.rs",
+        "research_02/cpp/event_inference.cpp",
+        "research_02/julia/event_inference.jl"
+      ],
+      "experiments": [
+        "research_02/RESEARCH.md"
       ]
     }
   ]

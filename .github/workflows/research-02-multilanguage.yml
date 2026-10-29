@@ -1,0 +1,65 @@
+
+name: Research 02 Multilanguage Validation
+
+on:
+  push:
+    branches:
+      - research-02-high-dimensional-event-inference
+    paths:
+      - "research_02/rust/**"
+      - "research_02/cpp/**"
+      - "research_02/julia/**"
+      - ".github/workflows/research-02-multilanguage.yml"
+  pull_request:
+    paths:
+      - "research_02/rust/**"
+      - "research_02/cpp/**"
+      - "research_02/julia/**"
+      - ".github/workflows/research-02-multilanguage.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  rust:
+    name: Research 02 Rust
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: dtolnay/rust-toolchain@stable
+
+      - name: Compile and run reference tests
+        run: |
+          rustc --edition=2021 --test \
+            research_02/rust/event_inference.rs \
+            -o /tmp/quassar_research02_rust
+          /tmp/quassar_research02_rust
+
+  cpp:
+    name: Research 02 C++17
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Compile and run reference tests
+        run: |
+          g++ -std=c++17 -O2 -Wall -Wextra -Wpedantic \
+            -DQUASSAR_RESEARCH02_TEST \
+            research_02/cpp/event_inference.cpp \
+            -o /tmp/quassar_research02_cpp
+          /tmp/quassar_research02_cpp
+
+  julia:
+    name: Research 02 Julia
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: julia-actions/setup-julia@v2
+        with:
+          version: "1.13"
+
+      - name: Run reference tests
+        run: julia --check-bounds=yes research_02/julia/event_inference.jl
